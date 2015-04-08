@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+<h1>Welcome to your bookshelf</h1>
+<ul>
+  <% @books.each do |book| %>
+    <li>
+      <h2><%= book.title %></h2> 
+      by <b><%= book.author %></b>
+      <br>
+      Started: <%= book.start_date.strftime("%B %d, %Y") %>
+      <br>
+      <% if book.end_date %>
+        Finished: <%= book.end_date.strftime("%B %d, %Y") %>
+      <% end %>
+
+      <ul class='links'>
+        <li><%= link_to 'Show', book %></li>
+        <li><%= link_to 'Edit', edit_book_path(book) %></li>
+        <li><%= link_to 'Destroy', book, method: :delete, data: {confirm: 'You sure?'} %></li>
+      </ul>
+    </li>
+  <% end %>
+</ul>
+<%= link_to 'New book', new_book_path %>

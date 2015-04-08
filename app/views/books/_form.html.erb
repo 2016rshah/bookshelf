@@ -1,0 +1,7 @@
+<%= simple_form_for @book do |f| %>
+  <%= f.input :title %>
+  <%= f.input :author %>
+  <%= f.input :start_date, as: :date, order: [:month, :day, :year] %>
+  <%= f.input :end_date, as: :date, order: [:month, :day, :year] %>
+  <%= f.button :submit %>
+<% end %>
