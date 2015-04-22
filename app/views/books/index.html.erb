@@ -1,23 +1,44 @@
-<p id="notice"><%= notice %></p>
-<h1>Welcome to your bookshelf</h1>
-<ul>
-  <% @books.each do |book| %>
-    <li>
-      <h2><%= book.title %></h2> 
-      by <b><%= book.author %></b>
-      <br>
-      Started: <%= book.start_date.strftime("%B %d, %Y") %>
-      <br>
-      <% if book.end_date %>
-        Finished: <%= book.end_date.strftime("%B %d, %Y") %>
-      <% end %>
-
-      <ul class='links'>
-        <li><%= link_to 'Show', book %></li>
-        <li><%= link_to 'Edit', edit_book_path(book) %></li>
-        <li><%= link_to 'Destroy', book, method: :delete, data: {confirm: 'You sure?'} %></li>
-      </ul>
-    </li>
-  <% end %>
-</ul>
-<%= link_to 'New book', new_book_path %>
+<div class="index">
+  <div class="row">
+    <div class = "columns small-12">
+      <p id="notice"><%= notice %></p>
+      <h1>Welcome to your bookshelf</h1>
+    </div>
+  </div>
+  <div class = "row">
+    <div class="columns small-12">
+    <% @books.each_slice(3) do |books| %>
+      <div class = "row">
+        <% books.each do |book| %>
+          <div class = "book columns small-4">
+            <h2><%= book.title %></h2> 
+            <p>
+              by <b><%= book.author %></b>
+            </p>
+            <p>
+            Started: <%= book.start_date.strftime("%B %d, %Y") %>
+            </p>
+            <p>
+              <% if book.end_date %>
+                Finished: <%= book.end_date.strftime("%B %d, %Y") %>
+              <% end %>
+            </p>
+            <p>
+              <ul class='links'>
+                <li><%= link_to 'Show', book %></li>
+                <li><%= link_to 'Edit', edit_book_path(book) %></li>
+                <li><%= link_to 'Destroy', book, method: :delete, data: {confirm: 'You sure?'} %></li>
+              </ul>
+            </p>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="new-book columns small-12">
+      <%= link_to 'New book', new_book_path %>
+    </div>
+  </div>
+</div>
