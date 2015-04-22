@@ -1,5 +1,22 @@
-.links{
-	li{
-		display:inline;
+.index{
+	h1{
+		text-align:center;
+	}
+	.links{
+		li{
+			display:inline;
+		}
+	}
+	.book{
+		text-align:center;
+		p{
+			margin-bottom:0px;
+		}
+		ul{
+			margin-left:0px;
+		}
+	}
+	.new-book{
+		text-align:center;
 	}
 }
