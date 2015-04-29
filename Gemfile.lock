@@ -61,9 +61,6 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.5.0)
-    foundation-rails (5.5.1.2)
-      railties (>= 3.1.0)
-      sass (>= 3.3.0, < 3.5)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
     hike (1.2.3)
@@ -167,7 +164,6 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   devise
-  foundation-rails
   jbuilder (~> 2.0)
   jquery-rails
   rails (= 4.2.1)

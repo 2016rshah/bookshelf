@@ -1,7 +1,29 @@
-<%= simple_form_for @book do |f| %>
-  <%= f.input :title %>
-  <%= f.input :author %>
-  <%= f.input :start_date, as: :date, order: [:month, :day, :year] %>
-  <%= f.input :end_date, as: :date, order: [:month, :day, :year] %>
-  <%= f.button :submit %>
-<% end %>
+<div class="row">
+	<%= simple_form_for @book do |f| %>
+		<div class="row">
+			<div class="twelve columns">
+	  			<%= f.input :title %>
+	  		</div>
+	  	</div>
+	  	<div class="row">
+			<div class="twelve columns">
+	  			<%= f.input :author %>
+	  		</div>
+	  	</div>
+	  	<div class="row">
+			<div class="three columns">
+	  			<%= f.input :start_date, as: :date, order: [:month, :day, :year] %>
+	  		</div>
+			<div class="three columns">
+	  			<%= f.input :end_date, as: :date, order: [:month, :day, :year] %>
+	  		</div>
+	  	</div>
+	  	<div class="row">
+			<div class="twelve columns">
+	  			<%= f.button :submit %>
+	  		</div>
+	  	</div>
+	  
+	  
+	<% end %>
+</div>

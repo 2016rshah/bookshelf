@@ -5,11 +5,11 @@
     </div>
   </div>
   <div class = "row">
-    <div class="columns small-12">
+    <div class="twelve columns">
     <% @books.each_slice(3) do |books| %>
       <div class = "row">
         <% books.each do |book| %>
-          <div class = "book columns small-4">
+          <div class = "book four columns">
             <h2><%= book.title %></h2> 
             <p>
               by <b><%= book.author %></b>
@@ -36,7 +36,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="new-book columns small-12">
+    <div class="new-book twelve columns">
       <%= link_to 'New book', new_book_path %>
     </div>
   </div>
