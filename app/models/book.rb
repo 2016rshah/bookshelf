@@ -1,4 +1,5 @@
 class Book < ActiveRecord::Base
+	belongs_to :user
 	validates_presence_of :title, :author
 	validate :end_after_start?
 
