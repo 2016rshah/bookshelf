@@ -14,14 +14,16 @@
             <p>
               by <b><%= book.author %></b>
             </p>
-            <p>
-            Started: <%= book.start_date.strftime("%B %d, %Y") %>
-            </p>
-            <p>
-              <% if book.end_date %>
+            <% if book.start_date %>
+              <p>
+              Started: <%= book.start_date.strftime("%B %d, %Y") %>
+              </p>
+            <% end %>
+            <% if book.end_date %>
+              <p>
                 Finished: <%= book.end_date.strftime("%B %d, %Y") %>
-              <% end %>
-            </p>
+              </p>
+            <% end %>
             <p>
               <ul class='links'>
                 <li><%= link_to 'Show', book %></li>

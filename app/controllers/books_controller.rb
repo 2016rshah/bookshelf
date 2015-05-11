@@ -5,7 +5,7 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = current_user.books.order("books.title")
+    @books = current_user.books.order("books.author")
   end
 
   # GET /books/1
