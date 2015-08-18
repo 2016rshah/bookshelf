@@ -8,5 +8,14 @@
   <%= @book.author %>
 </p>
 
+<p>
+	ISBN:
+	<%= @book.isbn %>
+</p>
+
+<p>
+<img src="http://covers.openlibrary.org/b/isbn/<%= @book.isbn %>-L.jpg" />
+</p>
+
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>

@@ -12,6 +12,7 @@ class BooksController < ApplicationController
   # GET /books/1.json
   def show
     @book = Book.find(params[:id]) #you can see any book, you just can't edit and stuff
+
   end
 
   # GET /books/new
@@ -28,10 +29,21 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     @book.user_id = current_user.id
+
+    #Get the book isbn from Open Library
+    client = Openlibrary::Client.new
+    results = client.search({author: @book.author, title: @book.title})
+    best_match = results[0]
+    puts best_match.title
+    puts best_match.isbn[0]
+    @book.isbn = best_match.isbn[0]
+    puts @book.isbn
+
     respond_to do |format|
       if @book.save
         format.html { redirect_to @book, notice: 'Book was successfully created.' }
         format.json { render :show, status: :created, location: @book }
+
       else
         format.html { render :new }
         format.json { render json: @book.errors, status: :unprocessable_entity }
@@ -74,7 +86,7 @@ class BooksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
-      params.require(:book).permit(:title, :author, :start_date, :end_date, :user_id)
+      params.require(:book).permit(:title, :author, :user_id)
     end
 
     def restrict_access

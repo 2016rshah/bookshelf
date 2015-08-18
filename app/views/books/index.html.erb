@@ -10,20 +10,7 @@
       <div class = "row">
         <% books.each do |book| %>
           <div class = "book four columns">
-            <h2><%= book.title %></h2> 
-            <p>
-              by <b><%= book.author %></b>
-            </p>
-            <% if book.start_date %>
-              <p>
-              Started: <%= book.start_date.strftime("%B %d, %Y") %>
-              </p>
-            <% end %>
-            <% if book.end_date %>
-              <p>
-                Finished: <%= book.end_date.strftime("%B %d, %Y") %>
-              </p>
-            <% end %>
+            <img src="http://covers.openlibrary.org/b/isbn/<%= book.isbn %>-L.jpg" />
             <p>
               <ul class='links'>
                 <li><%= link_to 'Show', book %></li>
