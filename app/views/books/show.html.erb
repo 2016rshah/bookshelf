@@ -1,21 +1,23 @@
-<p>
-  <strong>Title:</strong>
-  <%= @book.title %>
-</p>
+<div class="ta-center">
+	<h3>
+	  <strong>Title:</strong>
+	  <%= @book.title %>
+	</h3>
 
-<p>
-  <strong>Author:</strong>
-  <%= @book.author %>
-</p>
+	<p>
+	  <strong>Author:</strong>
+	  <%= @book.author %>
+	</p>
 
-<p>
-	<strong>ISBN:</strong>
-	<%= @book.isbn %>
-</p>
+	<p>
+		<strong>ISBN:</strong>
+		<%= @book.isbn %>
+	</p>
 
-<p>
-<img src="http://covers.openlibrary.org/b/isbn/<%= @book.isbn %>-L.jpg" />
-</p>
+	<p>
+	<img src="http://covers.openlibrary.org/b/isbn/<%= @book.isbn %>-L.jpg" />
+	</p>
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+	<%= link_to 'Edit', edit_book_path(@book) %> |
+	<%= link_to 'Back', books_path %>
+</div>
