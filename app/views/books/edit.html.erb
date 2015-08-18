@@ -1,31 +1,6 @@
 <h1>Editing Book</h1>
 
-<div class="row">
-	<%= simple_form_for @book do |f| %>
-		<div class="row">
-			<div class="twelve columns">
-	  			<%= f.input :title %>
-	  		</div>
-	  	</div>
-	  	<div class="row">
-			<div class="twelve columns">
-	  			<%= f.input :author %>
-	  		</div>
-	  	</div>
-	  	<div class="row">
-			<div class="twelve columns">
-	  			<%= f.input :isbn %>
-	  		</div>
-	  	</div>
-	  	<div class="row">
-			<div class="twelve columns">
-	  			<%= f.button :submit %>
-	  		</div>
-	  	</div>
-	  
-	  
-	<% end %>
-</div>
+<%= render 'form' %>
 
 <%= link_to 'Show', @book %> |
 <%= link_to 'Back', books_path %>

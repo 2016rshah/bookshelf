@@ -34,10 +34,11 @@ class BooksController < ApplicationController
     client = Openlibrary::Client.new
     results = client.search({author: @book.author, title: @book.title})
     best_match = results[0]
-    puts best_match.title
-    puts best_match.isbn[0]
-    @book.isbn = best_match.isbn[0]
-    puts @book.isbn
+    if best_match
+      puts best_match.isbn[0]
+      @book.isbn = best_match.isbn[0]
+      puts @book.isbn
+    end
 
     respond_to do |format|
       if @book.save
