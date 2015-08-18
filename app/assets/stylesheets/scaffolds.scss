@@ -25,7 +25,6 @@ a {
   }
   &:hover {
     color: #fff;
-    background-color: #000;
   }
 }
 
@@ -40,9 +39,7 @@ div {
 }
 
 .field_with_errors {
-  padding: 2px;
   background-color: red;
-  display: table;
 }
 
 #error_explanation {
@@ -66,4 +63,8 @@ div {
     font-size: 12px;
     list-style: square;
   }
+}
+
+.error{
+  display:none;
 }
