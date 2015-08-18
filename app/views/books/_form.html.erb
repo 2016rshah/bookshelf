@@ -2,17 +2,17 @@
 	<%= simple_form_for @book do |f| %>
 		<div class="row">
 			<div class="twelve columns">
-	  			<%= f.input :title %>
+	  			<%= f.input :title, :placeholder => "The Crucible" %>
 	  		</div>
 	  	</div>
 	  	<div class="row">
 			<div class="twelve columns">
-	  			<%= f.input :author %>
+	  			<%= f.input :author, :placeholder => "Arthur Miller"  %>
 	  		</div>
 	  	</div>
 	  	<div class="row">
 			<div class="twelve columns">
-	  			<%= f.input :isbn, required: false %>
+	  			<%= f.input :isbn, required: false, :placeholder => "We can probably guess this for you" %>
 	  		</div>
 	  	</div>
 	  	<div class="row">
