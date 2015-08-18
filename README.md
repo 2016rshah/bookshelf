@@ -12,6 +12,8 @@ Just type in the title and author and we'll take care of the rest. We'll search 
 
 That's why everybody reads, right? Just share your profile page for others to see your bookshelf. Your email adress in the top left corner when you're logged in is a link to your own profile. 
 
+For example, you can see my bookshelf [here](http://bookshelf.rshah.io/users/1). 
+
 #Common Problems
 
 It is possible that we don't find a cover at all for your book. If so, try manually entering a different ISBN number or just give up. 
