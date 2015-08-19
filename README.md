@@ -31,3 +31,4 @@ Also, a super easy way to contribute without doing anything is starring this pro
  - Make it pretty (please help me on this one, I'm really not a designer!)
  - About page with info about the project (about same info as README)
  - Footer with link to github repo and share buttons
+ - Usernames rather than emails
