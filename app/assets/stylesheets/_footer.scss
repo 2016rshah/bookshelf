@@ -1,0 +1,21 @@
+html, body {
+  height: 100%;
+}
+.table-container {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+.table-block {
+  display: table-row;
+  height: 1px;
+}
+.footer-push {
+  height: auto;
+  //height:95%;
+}
+#footer {
+  /* Placeholder footer styles */
+  text-align: center;
+  // height:5%;
+}
