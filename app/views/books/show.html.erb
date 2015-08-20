@@ -18,8 +18,12 @@
 		<strong>Owner:</strong>
 		<%= link_to @book.user.email, @book.user %>
 	</p>
-
-	<p>
+	<% if @book.notes %>
+		<p>
+			<strong>Notes:</strong>
+			<%= @book.notes %>
+		<p>
+	<% end %>
 		<img src="http://covers.openlibrary.org/b/isbn/<%= @book.isbn %>-L.jpg" />
 	</p>
 
