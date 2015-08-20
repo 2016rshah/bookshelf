@@ -5,7 +5,7 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = current_user.books.order("books.author")
+    redirect_to root_path
   end
 
   # GET /books/1
