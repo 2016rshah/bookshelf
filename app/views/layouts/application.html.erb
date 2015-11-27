@@ -16,12 +16,6 @@
   <body>
       <div class="table-container">
         <div class="table-block footer-push">
-          <% if notice %>
-            <p class="alert alert-success"><%= notice %></p>
-          <% end %>
-          <% if alert %>
-            <p class="alert alert-danger"><%= alert %></p>
-          <% end %>
           <div class="navbar">
           <% if user_signed_in? %>
             <p>Logged in as <strong><%= link_to current_user.email, current_user %></strong>
@@ -33,6 +27,14 @@
             <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></p>
           <% end %>
         </div>
+        <% if notice %>
+          <p class="alert alert-success"><%= notice %></p>
+        <% end %>
+        <% if alert %>
+          <p class="alert alert-danger"><%= alert %></p>
+        <% end %>
+
+
 
           <!-- Primary Page Layout
                –––––––––––––––––––––––––––––––––––––––––––––––––– -->
