@@ -50,7 +50,7 @@
                 <div class="row">
                   <div class="twelve columns">
                     <% if user_signed_in? %>
-                      <a href="/users/<%= current_user.id %>"><p class="footertext">Your Bookshelf</p></a> |
+                      <a href="/users/<%= current_user.id %>"><p class="footertext">Your Bookshelf</a> |</p>
                     <% else %>
                       <a href="/users/sign_up"><p class="footertext">Make your own account</p></a> |
                     <% end %>

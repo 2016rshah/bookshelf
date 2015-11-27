@@ -346,15 +346,20 @@ td:last-child {
 /* Nav bar
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .navbar {
-  background-color: #D4D4D4;
+  background-color: #F1654C;
   margin-bottom: 50px;
   height: 50px;
   text-align: center;
 }
 .navbar p {
+  color: #FFFFFF;
   padding-top: 1%;
   padding-left: 1%;
 }
+.navbar a:link, a:visited {
+  color:#FFFFFF;
+}
+
 
 
 
