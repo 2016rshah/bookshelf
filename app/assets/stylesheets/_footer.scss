@@ -9,13 +9,32 @@ html, body {
 .table-block {
   display: table-row;
   height: 1px;
+
 }
 .footer-push {
   height: auto;
   //height:95%;
 }
+
 #footer {
   /* Placeholder footer styles */
   text-align: center;
-  // height:5%;
+  background-color: #F1654C;
+  width: 100%;
+  height:100px;
+}
+.heart {
+  color:#3E4651;
+  display:inline;
+}
+.footertext {
+  color: #FFFFFF;
+  display: inline;
+}
+.footertext a:link {
+  color: #FFFFFF;
+
+}
+.footertext a:hover {
+  color:#3E4651;
 }

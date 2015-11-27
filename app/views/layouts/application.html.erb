@@ -22,15 +22,17 @@
           <% if alert %>
             <p class="alert alert-danger"><%= alert %></p>
           <% end %>
+          <div class="navbar">
           <% if user_signed_in? %>
-            Logged in as <strong><%= link_to current_user.email, current_user %></strong>.
-            <br>
+            <p>Logged in as <strong><%= link_to current_user.email, current_user %></strong>
+            |
             <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
             <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
           <% else %>
             <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-            <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+            <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></p>
           <% end %>
+        </div>
 
           <!-- Primary Page Layout
                –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -43,17 +45,17 @@
         <div class="table-block hidden-on-mobile">
           <!-- Page Footer Layout
                –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-          <div class="container">
+          <div class="containerfooter">
             <footer id="footer" class="twelve columns">
                 <div class="row">
                   <div class="twelve columns">
                     <% if user_signed_in? %>
-                      <a href="/users/<%= current_user.id %>">Your Bookshelf</a> |
+                      <a href="/users/<%= current_user.id %>"><p class="footertext">Your Bookshelf</p></a> |
                     <% else %>
-                      <a href="/users/sign_up">Make your own account</a> |
+                      <a href="/users/sign_up"><p class="footertext">Make your own account</p></a> |
                     <% end %>
-                    Made with &hearts; by <a href="https://github.com/2016rshah">Rushi Shah</a> | 
-                    <a href="https://github.com/2016rshah/bookshelf">Star it on Github!</a>
+                    <p class="footertext">Made with</p> <div class="heart">&hearts;</div> <p class="footertext">by <a href="https://github.com/2016rshah">Rushi Shah</a> |
+                    <a href="https://github.com/2016rshah/bookshelf">Star it on Github!</a></p>
                   </div>
                 </div>
             </footer>
