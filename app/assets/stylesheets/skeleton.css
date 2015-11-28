@@ -78,7 +78,7 @@
   .nine.columns                   { width: 74.0%;          }
   .ten.columns                    { width: 82.6666666667%; }
   .eleven.columns                 { width: 91.3333333333%; }
-  .twelve.columns                 { width: 100%; margin-left: 0; padding-top:1.4%; }
+  .twelve.columns                 { width: 100%; margin-left: 0; }
 
   .one-third.column               { width: 30.6666666667%; }
   .two-thirds.column              { width: 65.3333333333%; }
@@ -354,11 +354,23 @@ td:last-child {
 .navbar p {
   color: #FFFFFF;
   padding-top: 1%;
-  padding-left: 1%;
+  width: 60%;
+  margin: auto;
 }
 .navbar a:link, a:visited {
   color:#FFFFFF;
 }
+@media (max-width: 400px) {
+  .navbar {
+    height: 70px;
+  }
+}
+@media (max-width: 750px) {
+  .navbar p {
+    padding-top: 2%;
+  }
+}
+
 
 
 
