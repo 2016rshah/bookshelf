@@ -10,7 +10,7 @@ Check out an example of a bookshelf: http://bookshelf.rshah.io/users/1
 
 #Keep track of your books
 
-Just type in the title and author and we'll take care of the rest. We'll search for the ISBN number and use that to find a pretty picture of the cover of the book (for others to judge it by). 
+Just type in the title and author and we'll take care of the rest. You can also enter in any notes about the book you want, but that's optional. We'll search for the ISBN number (using the title and author) and use that to find a pretty picture of the cover of the book (for others to judge it by). 
 
 (This won't really work with dummy text, make sure you try a real book!)
 
