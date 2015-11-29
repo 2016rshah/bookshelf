@@ -2,9 +2,9 @@
   <div class="row">
     <div class = "columns small-12">
     	<% if current_user == @user %>
-    		<h1>Welcome to your bookshelf</h1>
+    		<h2 class="welcome">Welcome to your bookshelf</h2>
     	<% else %>
-      	<h1>Welcome to <%= @user.email %>'s bookshelf</h1>
+      	<h2 class="welcome">Welcome to <%= @user.email %>'s bookshelf</h2>
       <% end %>
     </div>
   </div>

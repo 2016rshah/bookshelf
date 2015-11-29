@@ -15,8 +15,9 @@
 	</p>
 
 	<p>
-		<strong>Owner:</strong>
+		<strong>Owner:</strong><div class="index links">
 		<%= link_to @book.user.email, @book.user %>
+	</div>
 	</p>
 	<% if @book.notes %>
 		<p>
@@ -26,7 +27,8 @@
 	<% end %>
 		<img src="http://covers.openlibrary.org/b/isbn/<%= @book.isbn %>-L.jpg" />
 	</p>
-
+	<div class="index links">
 	<%= link_to 'Edit', edit_book_path(@book) %> |
 	<%= link_to 'Back', @book.user %>
+</div>
 </div>
