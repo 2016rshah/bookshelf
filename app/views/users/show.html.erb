@@ -21,7 +21,7 @@
       <div class = "row">
         <% books.each do |book| %>
           <div class = "book three columns">
-            <%= link_to image_tag("http://covers.openlibrary.org/b/isbn/#{book.isbn}-M.jpg"), book %>
+            <%= link_to image_tag("http://covers.openlibrary.org/b/isbn/#{book.isbn}-M.jpg?default=false", {:onerror => "this.src='/default-book.jpg'"}), book %>
             <p><strong><%= book.title %></strong></p>
             <p>
               <ul class='links'>
