@@ -34,7 +34,7 @@ Also, a super easy way to contribute without doing anything is starring this pro
 
 #Todo
  - Add share buttons (twitter, facebook) for each profile
- - Make it pretty (please help me on this one, I'm really not a designer!)
+ - ~~Make it pretty (please help me on this one, I'm really not a designer!)~~
  - About page with info about the project (about same info as README)
  - ~~Footer with link to github repo~~
  - Usernames rather than emails
