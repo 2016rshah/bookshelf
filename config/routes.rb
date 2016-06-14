@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+  get '/books/:id/destroy', to: 'books#destroy'
   root to: 'users#current_user_home'
 
   # Example of regular route:
