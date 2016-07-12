@@ -1,12 +1,17 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :books
-  resources :users
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   get '/books/:id/destroy', to: 'books#destroy'
+
+  get '/books/search', to: 'books#search'
+  post '/books/search', to:'books#search'
+
+  resources :books
+  resources :users
   root to: 'users#current_user_home'
 
   # Example of regular route:

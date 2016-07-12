@@ -1,0 +1,39 @@
+<div class="ta-center">
+	
+	<% if @isbns then %>
+		<h2 class="welcome">Select a book</h2>
+		<% if @isbns.length == 0 then %>
+			<p>Couldn't find any ISBN numbers for that book, want to <%= link_to "create it anyways", "/books/new?title=#{@title}&author=#{@author}&isbn=-1"%>?</p>
+		<% else %>
+			<div class = "row">
+			    <div class="twelve columns">
+				    <% @isbns.each_slice(4) do |isbns| %>
+				      <div class = "row">
+				        <% isbns.each do |isbn| %>
+				          <div class = "book three columns">
+				            <%= link_to image_tag("http://covers.openlibrary.org/b/isbn/#{isbn}-M.jpg?default=false", {:onerror => "this.src='/default-book.jpg'"}), "/books/new?title=#{@title}&author=#{@author}&isbn=#{isbn}" %>
+				          </div>
+				        <% end %>
+				      </div>
+				    <% end %>
+			    </div>
+		    </div>
+	    <% end %>
+	<% else %>
+		<h2 class="welcome">Search for a book</h2>
+		<div class="row ta-center">
+			<%= form_tag do %>
+			  <%= label_tag(:title, "Title") %>
+			  <%= text_field_tag(:title) %>
+
+			  <%= label_tag(:author, "Author:") %>
+			  <%= text_field_tag(:author) %>
+
+			  <%= submit_tag("Search") %>
+			<% end %>
+		</div>
+	<% end %>
+	<div class="index links">
+		<%= link_to 'Back', :back %>
+	</div>
+</div>

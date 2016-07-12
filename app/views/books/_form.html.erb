@@ -2,12 +2,20 @@
 	<%= simple_form_for @book do |f| %>
 		<div class="row">
 			<div class="twelve columns">
-	  			<%= f.input :title, :placeholder => "The Crucible" %>
+				<% if @title then %>
+					<%= f.input :title, :input_html => { :value => @title }%>
+				<% else %>
+	  				<%= f.input :title, :placeholder => "The Crucible" %>
+	  			<% end %>
 	  		</div>
 	  	</div>
 	  	<div class="row">
 			<div class="twelve columns">
-	  			<%= f.input :author, :placeholder => "Arthur Miller"  %>
+	  			<% if @author then %>
+					<%= f.input :author, :input_html => { :value => @author } %>
+				<% else %>
+	  				<%= f.input :author, :placeholder => "Arthur Miller" %>
+	  			<% end %>
 	  		</div>
 	  	</div>
 	  	<div class="row">
@@ -17,7 +25,11 @@
 	  	</div> 
 	  	<div class="row">
 			<div class="twelve columns">
-	  			<%= f.input :isbn, required: false, :placeholder => "We can probably guess this for you", :label => "ISBN:" %>
+				<% if @isbn then %>
+					<%= f.input :isbn, :input_html => { :value => @isbn } %>
+				<% else %>
+	  				<%= f.input :isbn, required: false, :placeholder => "Go to /books/search to find this", :label => "ISBN:" %>
+	  			<% end %>
 	  		</div>
 	  	</div>
 	  	<div class="row">

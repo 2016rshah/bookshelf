@@ -2,6 +2,25 @@ class BooksController < ApplicationController
   before_action :authenticate_user!
   before_action :set_book, only: [:edit, :update, :destroy] #only gets users books
 
+
+  def search
+    if params[:title] and params[:author] then
+      client = Openlibrary::Client.new
+      results = client.search({author: params[:author], title: params[:title]})
+      @isbns = []
+      results.each do |result|
+        if result.isbn then
+          result.isbn.each do |isbn|
+            @isbns.push(isbn)
+          end
+        end
+      end
+      @title = params[:title]
+      @author = params[:author]
+      puts @results
+    end
+  end
+
   # GET /books
   # GET /books.json
   def index
@@ -17,6 +36,9 @@ class BooksController < ApplicationController
 
   # GET /books/new
   def new
+    @isbn = params[:isbn]
+    @title = params[:title]
+    @author = params[:author]
     @book = Book.new
   end
 
@@ -30,15 +52,19 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
     @book.user_id = current_user.id
 
-    #Get the book isbn from Open Library
-    client = Openlibrary::Client.new
-    results = client.search({author: @book.author, title: @book.title})
-    best_match = results[0]
-    if best_match
-      puts best_match.isbn[0]
-      @book.isbn = best_match.isbn[0]
-      puts @book.isbn
+    if !book_params[:isbn] then
+      @book.isbn = -1
     end
+
+    # #Get the book isbn from Open Library
+    # client = Openlibrary::Client.new
+    # results = client.search({author: @book.author, title: @book.title})
+    # best_match = results[0]
+    # if best_match
+    #   puts best_match.isbn[0]
+    #   @book.isbn = best_match.isbn[0]
+    #   puts @book.isbn
+    # end
 
     respond_to do |format|
       if @book.save
