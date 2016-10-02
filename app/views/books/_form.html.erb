@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="twelve columns">
 				<% if @title then %>
-					<%= f.input :title, :input_html => { :value => @title }%>
+					<%= f.input :title %>
 				<% else %>
 	  				<%= f.input :title, :placeholder => "The Crucible" %>
 	  			<% end %>
@@ -12,7 +12,7 @@
 	  	<div class="row">
 			<div class="twelve columns">
 	  			<% if @author then %>
-					<%= f.input :author, :input_html => { :value => @author } %>
+					<%= f.input :author %>
 				<% else %>
 	  				<%= f.input :author, :placeholder => "Arthur Miller" %>
 	  			<% end %>
@@ -22,11 +22,11 @@
 	  		<div class="twelve columns">
 	  			<%= f.input :notes, required:false, :placeholder => "For your own edification", :label => "Any notes?" %>
 	  		</div>
-	  	</div> 
+	  	</div>
 	  	<div class="row">
 			<div class="twelve columns">
 				<% if @isbn then %>
-					<%= f.input :isbn, :input_html => { :value => @isbn } %>
+					<%= f.input :isbn %>
 				<% else %>
 	  				<%= f.input :isbn, required: false, :placeholder => "Go to /books/search to find this", :label => "ISBN:" %>
 	  			<% end %>
@@ -37,7 +37,7 @@
 	  			<%= f.button :submit %>
 	  		</div>
 	  	</div>
-	  
-	  
+
+
 	<% end %>
 </div>

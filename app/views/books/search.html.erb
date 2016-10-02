@@ -1,9 +1,9 @@
 <div class="ta-center">
-	
+
 	<% if @isbns then %>
 		<h2 class="welcome">Select a book</h2>
 		<% if @isbns.length == 0 then %>
-			<p>Couldn't find any ISBN numbers for that book, want to <%= link_to "create it anyways", "/books/new?title=#{@title}&author=#{@author}&isbn=-1"%>?</p>
+			<p>Couldn't find any ISBN numbers for that book, want to <%= link_to "create it anyways", new_book_path(title: @title, author: @author)%>?</p>
 		<% else %>
 			<div class = "row">
 			    <div class="twelve columns">
