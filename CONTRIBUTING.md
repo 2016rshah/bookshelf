@@ -19,7 +19,7 @@ Check out the [issues](https://github.com/2016rshah/bookshelf/issues) and pick s
 
 #Project Structure
 
-Since it is a typical rails app, everything should be exactly where you expect it to be. With that being said, most of the code you might need to edit will be in `app/views` or `app/controllers`
+Since it is a typical rails app, everything should be exactly where you expect it to be. With that being said, most of the code you might need to edit will be in `app/views`, `app/assets`, or `app/controllers`
 
 #Todo
  - Add share buttons (twitter, facebook) for each profile
