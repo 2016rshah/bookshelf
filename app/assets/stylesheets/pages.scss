@@ -1,0 +1,25 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.landing-header{
+  background-image: url(book-spines5.png);
+  height: 400px;
+  position: relative;
+
+  #intro-headline{
+  position: absolute;
+  text-align: center;
+  top: 340px;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  }
+}
+
+#left-book{
+  height: 265px;
+  width: 400px;
+  float: left;
+  margin: 0px 20px 15px 0px;
+}
