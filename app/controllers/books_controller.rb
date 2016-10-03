@@ -36,10 +36,7 @@ class BooksController < ApplicationController
 
   # GET /books/new
   def new
-    @isbn = params[:isbn]
-    @title = params[:title]
-    @author = params[:author]
-    @book = Book.new
+    @book = Book.new(title: params[:title], author: params[:author], isbn: params[:isbn])
   end
 
   # GET /books/1/edit
@@ -51,10 +48,6 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     @book.user_id = current_user.id
-
-    if !book_params[:isbn] then
-      @book.isbn = -1
-    end
 
     # #Get the book isbn from Open Library
     # client = Openlibrary::Client.new
