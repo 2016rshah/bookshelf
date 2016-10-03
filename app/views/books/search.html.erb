@@ -24,10 +24,10 @@
 		<div class="row ta-center">
 			<%= form_tag do %>
 			  <%= label_tag(:title, "Title") %>
-			  <%= text_field_tag(:title) %>
+        <%= text_field_tag(:title, params[:title], :required => true) %>
 
 			  <%= label_tag(:author, "Author:") %>
-			  <%= text_field_tag(:author) %>
+        <%= text_field_tag(:author, params[:author], :required => true) %>
 
 			  <%= submit_tag("Search") %>
 			<% end %>
