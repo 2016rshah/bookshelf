@@ -10,3 +10,10 @@ form{
 label{
 	margin-right:10px;
 }
+
+/* media query to expand text fields on forms for smaller screens */
+@media (max-width: 740px) {
+  input {
+    width: 100%;
+  }
+}
