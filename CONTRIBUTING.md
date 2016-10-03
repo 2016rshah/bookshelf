@@ -15,11 +15,15 @@ This is a Ruby on Rails project with a Postgres database:
 
 *Disclaimer*: I set this all up a while ago, so I might have forgotten a step. If you have trouble getting started, open up an issue and let me know.
 
-Check out the [issues](https://github.com/2016rshah/bookshelf/issues) and pick something to work on. If you think you can do it, comment on the issue to let people know that you've got it covered. When you're done, send in a pull-request :)
-
 #Project Structure
 
 Since it is a typical rails app, everything should be exactly where you expect it to be. With that being said, most of the code you might need to edit will be in `app/views`, `app/assets`, or `app/controllers`
+
+#What you can help with
+
+Check out the [issues](https://github.com/2016rshah/bookshelf/issues) and pick something to work on.
+
+If you think you can do it, **please** comment on the issue to let people know that you've got it covered. When you're done, send in a pull-request.
 
 #Todo
  - Add share buttons (twitter, facebook) for each profile
