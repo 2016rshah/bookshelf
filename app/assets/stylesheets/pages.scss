@@ -2,24 +2,87 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$slabo: 'Slabo 27px', serif;
+$catamaran: 'Catamaran', sans-serif;
+$turquoise: #00B5B5;
+$grey: #a0a0a0;
+
 .landing-header{
   background-image: url(book-spines5.png);
   height: 400px;
   position: relative;
 
   #intro-headline{
-  position: absolute;
-  text-align: center;
-  top: 340px;
-  left: 0;
-  width: 100%;
-  color: #fff;
+    position: absolute;
+    text-align: center;
+    top: 340px;
+    left: 0;
+    width: 100%;
+    font-family: $slabo;
+    font-size: 45px;
+    color: #fff;
   }
 }
 
-#left-book{
-  height: 265px;
-  width: 400px;
-  float: left;
-  margin: 0px 20px 15px 0px;
+.landing-main{
+  min-width: 100%;
+
+  a:visited{
+    color: inherit;
+  }
+
+  a:hover{
+    color: $turquoise;
+  }
+
+  .landing-subtitle{
+    text-align: center;
+    margin-top: 65px;
+    font-family: $catamaran;
+    font-size: 32px;
+    color: $turquoise;
+  } 
+
+  .section-title{
+    font-family: $catamaran;
+    color: $grey;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .text-right{
+    margin-top: 60px;
+
+    .text-right-image{
+      float: left;
+      height: 125px;
+      width: 150px;
+      margin-right: 50px;
+    }
+  }
+
+  .text-left{
+    margin-top: 100px;
+
+    .text-left-image{
+      float: right;
+      height: 125px;
+      width: 150px;
+      margin-left: 50px;
+    }
+  } 
+
+  .center-image{
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1313px) {
+    .center-image{
+      margin-top: 7%;
+      margin-left: 29%;
+    }
+  }
 }
