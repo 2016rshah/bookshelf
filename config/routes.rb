@@ -12,6 +12,11 @@ Rails.application.routes.draw do
 
   resources :books
   resources :users
+
+  authenticated :user do
+    root 'users#current_user_home', as: :authenticated_root
+  end
+
   root to: 'pages#index'
 
   # Example of regular route:
