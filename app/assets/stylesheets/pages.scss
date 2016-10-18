@@ -1,0 +1,79 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$slabo: 'Slabo 27px', serif;
+$catamaran: 'Catamaran', sans-serif;
+$turquoise: #00B5B5;
+$grey: #a0a0a0;
+
+.landing-header{
+
+  #intro-headline{
+    text-align: center;
+    left: 0;
+    width: 100%;
+    font-family: $slabo;
+    font-size: 45px;
+  }
+}
+
+.landing-main{
+  min-width: 100%;
+
+  a:visited{
+    color: inherit;
+  }
+
+  a:hover{
+    color: $turquoise;
+  }
+
+  .landing-subtitle{
+    text-align: center;
+    margin-top: 65px;
+    font-family: $catamaran;
+    font-size: 32px;
+    color: $turquoise;
+  } 
+
+  .section-title{
+    font-family: $catamaran;
+    color: $grey;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .text-right{
+    margin-top: 60px;
+
+    .text-right-image{
+      float: left;
+      height: 125px;
+      margin-right: 50px;
+    }
+  }
+
+  .text-left{
+    margin-top: 100px;
+
+    .text-left-image{
+      float: right;
+      height: 125px;
+      margin-left: 50px;
+    }
+  } 
+
+  .center-image{
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1313px) {
+    .center-image{
+      margin-left: 29%;
+    }
+  }
+}

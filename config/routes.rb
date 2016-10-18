@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   resources :books
   resources :users
-  root to: 'users#current_user_home'
+  root to: 'pages#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

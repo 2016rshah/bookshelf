@@ -7,6 +7,8 @@
     <title>Bookshelf</title>
 
     <link rel="icon" type="image/png" href="http://www.uniquetek.com/members/696296/uploaded/book-favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
@@ -18,12 +20,13 @@
         <div class="table-block footer-push">
           <div class="navbar">
           <% if user_signed_in? %>
-            <p>Logged in as <strong><%= link_to current_user.email, current_user %></strong>
-            |
+            <p>Logged in as <strong><%= link_to current_user.email, current_user %></strong> |
+            <%= link_to 'Home', root_path, :class => 'navbar-link' %> |
             <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
             <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></p>
           <% else %>
-            <p><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+            <p><%= link_to 'Home', root_path, :class => 'navbar-link' %> |
+              <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
             <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></p>
           <% end %>
         </div>

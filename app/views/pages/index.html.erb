@@ -1,0 +1,29 @@
+<div class="landing-header">
+  <h2 id="intro-headline">Bookshelf</h2>
+</div>
+
+<div class="landing-main">
+  <h3 class="landing-subtitle">Showcase the books you have read with this handy bookshelf!</h3>
+
+  <div class="text-right">
+    <%= image_tag("search-icon.png", class: "text-right-image", alt: "magnifying glass") %>
+    <h4 class="section-title">Keep track of your books</h4>
+    <p>Just type in the title and author and we'll take care of the rest.  We'll search for the ISBN number (using the title and author) and use that to find a pretty picture of the cover of the book.</p>
+  </div>
+
+  <%= image_tag("bookshelf-screenshot1.png", class: "center-image", alt: "Sample bookshelf page", title: "Sample bookshelf page") %>
+
+  <div class="text-left">
+    <%= image_tag("note-icon.png", class: "text-left-image") %>
+    <h4 class="section-title">Add notes</h4>
+    <p>Bookshelf lets you save notes about any book.  Whether you're reacting to a plot twist, making yourself a reminder, or taking notes on a character, your thoughts will be there when you return.</p>
+  </div>
+
+  <%= image_tag("book-note.png", class: "center-image", alt: "Taking notes on a book", title: "Sample bookshelf page") %>
+
+  <div class="text-right">
+    <%= image_tag("share-icon.png", class: "text-right-image") %>
+    <h4 class="section-title">Sign up to share</h4>
+    <p><%= link_to "Sign up now", new_user_registration_path %> to share your profile page and let others see your bookshelf.  What interesting books are your friends and family reading?</p>
+  </div>
+</div>
