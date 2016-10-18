@@ -8,19 +8,13 @@ $turquoise: #00B5B5;
 $grey: #a0a0a0;
 
 .landing-header{
-  background-image: url(book-spines5.png);
-  height: 400px;
-  position: relative;
 
   #intro-headline{
-    position: absolute;
     text-align: center;
-    top: 340px;
     left: 0;
     width: 100%;
     font-family: $slabo;
     font-size: 45px;
-    color: #fff;
   }
 }
 
@@ -58,7 +52,6 @@ $grey: #a0a0a0;
     .text-right-image{
       float: left;
       height: 125px;
-      width: 150px;
       margin-right: 50px;
     }
   }
@@ -69,7 +62,6 @@ $grey: #a0a0a0;
     .text-left-image{
       float: right;
       height: 125px;
-      width: 150px;
       margin-left: 50px;
     }
   } 
@@ -81,7 +73,6 @@ $grey: #a0a0a0;
 
   @media (min-width: 1313px) {
     .center-image{
-      margin-top: 7%;
       margin-left: 29%;
     }
   }
