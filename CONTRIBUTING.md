@@ -28,7 +28,7 @@ If you think you can do it, **please** comment on the issue to let people know t
 #Todo
  - Add share buttons (twitter, facebook) for each profile
  - ~~Make it pretty (please help me on this one, I'm really not a designer!)~~
- - About page with info about the project (about same info as README)
+ - ~~About page with info about the project (about same info as README)~~
  - Usernames rather than emails
 
 Feel free to open up issues or comment on issues if you have anything to say!
