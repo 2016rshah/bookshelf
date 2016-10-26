@@ -79,6 +79,7 @@ class BooksController < ApplicationController
         format.html { redirect_to @book, notice: 'Book was successfully updated.' }
         format.json { render :show, status: :ok, location: @book }
       else
+        flash[:alert] = @book.errors.full_messages.first
         format.html { render :edit }
         format.json { render json: @book.errors, status: :unprocessable_entity }
       end
