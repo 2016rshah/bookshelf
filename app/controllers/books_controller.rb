@@ -63,8 +63,8 @@ class BooksController < ApplicationController
       if @book.save
         format.html { redirect_to @book, notice: 'Book was successfully created.' }
         format.json { render :show, status: :created, location: @book }
-
       else
+        flash[:alert] = @book.errors.full_messages.first
         format.html { render :new }
         format.json { render json: @book.errors, status: :unprocessable_entity }
       end
